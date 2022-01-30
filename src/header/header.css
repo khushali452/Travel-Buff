@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     font-family: "Lora",serif;
-    color: #444;
+    color: rgb(90, 87, 87);
 } 
 .headerTitleSm{
     position: absolute;
