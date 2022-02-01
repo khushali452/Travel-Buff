@@ -1,0 +1,74 @@
+.register{
+    height: calc(100vh - 50px);
+    font-family: 'josefin Sans',sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.65),
+        rgba(255, 255, 255, 0.5)
+      ),url("https://media.istockphoto.com/vectors/travel-vacation-tourism-leisure-seamless-pattern-contour-light-blue-vector-id1196475311");
+    background-size: cover;
+}
+.registerTitle {
+    font-size: 50px;
+    border-bottom: 2px solid black;
+  }
+  
+  .registerForm {
+      font-size: 18px;
+      
+      font-weight: 500;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .registerForm > label {
+    margin: 10px 0;
+
+  }
+  
+  .registerInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1.5px solid black;
+  }
+  
+  .registerInput:focus {
+    outline: none;
+  }
+  
+  .registerButton {
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: 'josefin Sans',sans-serif;
+    cursor: pointer;
+    background-color: rgb(1, 114, 114);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .loginButton {
+    position: absolute;
+    font-family: 'josefin Sans',sans-serif;
+    font-size: 15px;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(1, 114, 114);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+  .registerInput::-webkit-input-placeholder {
+    font-family: 'josefin Sans', Arial, Helvetica, sans-serif;  
+ }

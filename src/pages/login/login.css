@@ -1,0 +1,74 @@
+.login{
+    height: calc(100vh - 50px);
+    font-family: 'josefin Sans',sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.65),
+        rgba(255, 255, 255, 0.5)
+      ),url("https://previews.123rf.com/images/elenavdovina/elenavdovina1805/elenavdovina180500015/100848734-travel-vacation-tourism-recreation-seamless-pattern-monochrome-blue-vector-different-types-of-recrea.jpg");
+    background-size: cover;
+}
+.loginTitle {
+    font-size: 50px;
+    border-bottom: 2px solid black;
+  }
+  
+  .loginForm {
+      font-size: 18px;
+      
+      font-weight: 500;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .loginForm > label {
+    margin: 10px 0;
+
+  }
+  
+  .loginInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1.5px solid black;
+  }
+  
+  .loginInput:focus {
+    outline: none;
+  }
+  
+  .lginButton {
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: 'josefin Sans',sans-serif;
+    cursor: pointer;
+    background-color: rgb(1, 114, 114);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .loginRegisterButton {
+    position: absolute;
+    font-family: 'josefin Sans',sans-serif;
+    font-size: 15px;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(1, 114, 114);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+  .loginInput::-webkit-input-placeholder {
+    font-family: 'josefin Sans', Arial, Helvetica, sans-serif;  
+ }
