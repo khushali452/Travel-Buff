@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from "react-router";
 import "./singlePost.css";
 
 export default function SinglePost() {
+  const location = useLocation()
+  const path=location.pathname.split("/")[2];
   return <div className='singlePost'>
       <div className='singlePostWrapper'>
         <img className='singlePostImg' src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2019/04/THAILAND.jpg?ssl=1" alt=""></img>
