@@ -1,26 +1,48 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { useLocation } from "react-router";
 import "./singlePost.css";
+import axios from "axios";
 
 export default function SinglePost() {
   const location = useLocation()
   const path=location.pathname.split("/")[2];
+  const [post, setPost] = useState({});
+
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setPost(res.data);
+     
+      
+    };
+    getPost();
+  }, [path]);
+
+
   return <div className='singlePost'>
       <div className='singlePostWrapper'>
-        <img className='singlePostImg' src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2019/04/THAILAND.jpg?ssl=1" alt=""></img>
+        {post.photo && (
+          <img className='singlePostImg' 
+          src={post.photo}
+          alt="">
+          </img>
+        )}
+        
         <h1 className='singlePostTitle'>
-          this is my single post
+          {post.title}
           <div className='singlePostEdit'>
           <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
           </div>
         </h1>
         <div className='singlePostInfo'>
-          <span className='singlePostAuthor'>Author : <b>Khushali</b></span>
-          <span className='singlePostDate'> 1 hour ago</span>
+          <span className='singlePostAuthor'>Author : <b>{post.username}</b></span>
+          <span className='singlePostDate'>{new Date(post.createdAt).toDateString()}</span>
         </div>
-        <p className='singlePostDesc'>hello hsagfggggggggggggggggggggggahfadskag
-          FGjdfgjDFJFDJSDJFGDSKGFSDGIFGgkgsdkfjskdjfgskdgfsudgfwkgfgdfksgdfkgs</p>
+        <p className='singlePostDesc'>
+          {post.desc}
+        </p>
       </div>
   </div>;
 }
