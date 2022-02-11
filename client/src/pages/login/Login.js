@@ -10,7 +10,7 @@ export default function Login() {
 
   const userRef= useRef();
   const passwordRef=useRef();
-  const{user,dispatch,isFetching}=useContext(Context)
+  const{dispatch,isFetching}=useContext(Context)
 
   const handleSubmit=async (e)=>{
     e.preventDefault()
@@ -25,7 +25,6 @@ export default function Login() {
       dispatch({ type: "LOGIN_FAILURE" });
     }
   }
-console.log(isFetching);
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
@@ -48,7 +47,7 @@ console.log(isFetching);
         placeholder="Enter Your Password..." 
         ref={passwordRef}
         />
-        <button className="lginButton" type="submit">Login</button>
+        <button className="lginButton" type="submit" disabled={isFetching}>Login</button>
       </form>
         <button className="loginRegisterButton">
           <Link className="link" to="/register">Register</Link>

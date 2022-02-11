@@ -56,6 +56,10 @@
     text-align: center;
   }
   
+  .lginButton:disabled{
+    cursor: not-allowed;
+    background-color:rgb(50, 151, 155) ;
+  }
   .loginRegisterButton {
     position: absolute;
     font-family: 'josefin Sans',sans-serif;

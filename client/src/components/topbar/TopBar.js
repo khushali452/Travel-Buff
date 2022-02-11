@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
 import "./topbar.css";
+import { Context } from '../../context/Context';
 
 export default function TopBar() {
-  const user=false;
-  return( <div className='top'>
+  const {user,dispatch}=useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
+return( <div className='top'>
       <div className='topLeft'>
       <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
@@ -14,19 +20,30 @@ export default function TopBar() {
       <div className='topCenter'>
       <div className='topList'>
         <li className='topListItem'>
-          <Link className='link' to="/">HOME</Link>
+          <Link 
+          className='link'
+           to="/">HOME</Link>
         </li>
-        <li className='topListItem'><Link className='link' to="/">ABOUT</Link></li>
-        <li className='topListItem'><Link className='link' to="/">CONTACT</Link></li>
-        <li className='topListItem'><Link className='link' to="/write">WRITE</Link></li>
-        {user && <li className="topListItem">LOGOUT</li>}
+        <li className='topListItem'>
+          <Link 
+          className='link' 
+          to="/">ABOUT</Link></li>
+        <li className='topListItem'>
+          <Link className='link' 
+          to="/">CONTACT</Link></li>
+        <li className='topListItem'>
+          <Link className='link' 
+          to="/write">WRITE</Link></li>
+        <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
       </div>
 
       </div>
       <div className='topRight'>
         {
           user?(
-            <img className='topImg' src='https://miro.medium.com/max/3150/1*ph1pktjOwfYviVki_X66Og.jpeg'></img>
+            <img className='topImg' src={user.profilePicture}></img>
           ) : (
             <ul className='topList'>
               <li className='topListItem'>
