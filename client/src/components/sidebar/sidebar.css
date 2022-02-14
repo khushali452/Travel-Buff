@@ -32,8 +32,11 @@
     width: 250px;
     height: 250px;
   }
+  .text{
+      margin: 30px;
+  }
 .sidebar>p{
-    padding: 30px;
+    padding: 40px;
 }
 .sidebarList{
     list-style: none;

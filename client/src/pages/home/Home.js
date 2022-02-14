@@ -22,6 +22,15 @@ useEffect(()=>{
   return(
     <>
     <Header />
+    <div id= {'about'}className='about'>
+      <div className='outer'>Hola Globetrotter</div>
+   
+   <br></br>
+   <div className='inner'>
+   Share the places you love and explore the world !
+
+   </div>
+  </div>
   <div className='home'>
    <Posts posts={posts}/>
    <Sidebar />

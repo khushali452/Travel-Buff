@@ -1,0 +1,17 @@
+.about{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'josefin Sans',sans-serif;
+    color: rgb(90, 87, 87);
+       
+}
+.outer{
+    font-size: 30px;
+    font-weight: 400;
+}
+.inner{
+    font-size: 22px;
+    font-weight: 400;
+}

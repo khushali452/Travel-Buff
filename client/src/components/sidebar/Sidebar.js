@@ -19,7 +19,9 @@ export default function Sidebar() {
     <div className='sidebarItem'>
       <span className='sidebarTitle'>ABOUT ME</span>
       <img  src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg" alt="" />
-      <p>hey there ....khushali here</p>
+      <p className='text'>Hey there...Khushali here.
+        I am a Hodophile and like to travel and explore new places across the world.
+      </p>
     </div>
     <div className='sidebarItem'>
       <span className='sidebarTitle'>CATEGORIES</span>
